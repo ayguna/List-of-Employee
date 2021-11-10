@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+    {% load staticfiles %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+</head>   
+<body>
+<div class="container ">
+    <h1>Login</h1>
+    <form method="POST">
+        <table>
+      {% csrf_token %}
+      {{ login_form}}
+    </table>
+      <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+    <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+  </div>
+</body>
+</html>
